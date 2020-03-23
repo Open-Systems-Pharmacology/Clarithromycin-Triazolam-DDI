@@ -1055,7 +1055,7 @@
         {
           "InternalName": "CompetitiveInhibition",
           "DataSource": "Eberl (2007)",
-          "Molecule": "ABCB1",
+          "Molecule": "P-gp",
           "Parameters": [
             {
               "Name": "Ki",
