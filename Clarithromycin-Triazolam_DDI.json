@@ -1007,7 +1007,11 @@
             {
               "Name": "Lipophilicity",
               "Value": 2.3,
-              "Unit": "Log Units"
+              "Unit": "Log Units",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Lappin 2011"
+              }
             }
           ]
         }
@@ -1019,7 +1023,11 @@
           "Parameters": [
             {
               "Name": "Fraction unbound (plasma, reference value)",
-              "Value": 0.299
+              "Value": 0.299,
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Chu 1993"
+              }
             }
           ]
         }
@@ -1031,36 +1039,76 @@
             {
               "Name": "Solubility at reference pH",
               "Value": 12.17,
-              "Unit": "mg/ml"
+              "Unit": "mg/ml",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Salem 2003"
+              }
             },
             {
               "Name": "Reference pH",
-              "Value": 2.4
+              "Value": 2.4,
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Salem 2003"
+              }
             }
           ]
         }
       ],
       "IntestinalPermeability": [
         {
-          "Name": "fit"
+          "Name": "fit",
+          "Parameters": [
+            {
+              "Name": "Specific intestinal permeability (transcellular)",
+              "Value": 1.23E-06,
+              "Unit": "dm/min",
+              "ValueOrigin": {
+                "Source": "ParameterIdentification",
+                "Description": "optimized"
+              }
+            }
+          ]
         }
       ],
       "PkaTypes": [
         {
           "Type": "Base",
-          "Pka": 8.99
+          "Pka": 8.99,
+          "ValueOrigin": {
+            "Source": "Publication",
+            "Description": "McFarland 1997"
+          }
         }
       ],
       "Processes": [
         {
-          "InternalName": "CompetitiveInhibition",
-          "DataSource": "Eberl (2007)",
-          "Molecule": "P-gp",
+          "InternalName": "MetabolizationLiverMicrosomes_MM",
+          "DataSource": "fit",
+          "Molecule": "CYP3A4",
           "Parameters": [
             {
-              "Name": "Ki",
-              "Value": 4.1,
-              "Unit": "µmol/l"
+              "Name": "In vitro Vmax for liver microsomes",
+              "Value": 0.0,
+              "Unit": "pmol/min/mg mic. protein"
+            },
+            {
+              "Name": "Km",
+              "Value": 48.7,
+              "Unit": "µmol/l",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Rodrigues 1997"
+              }
+            },
+            {
+              "Name": "kcat",
+              "Value": 76.5,
+              "Unit": "1/min",
+              "ValueOrigin": {
+                "Source": "ParameterIdentification"
+              }
             }
           ]
         },
@@ -1072,21 +1120,18 @@
             {
               "Name": "Body weight",
               "Value": 71.5,
-              "Unit": "kg"
-            },
-            {
-              "Name": "Volume (kidney)",
-              "Value": 0.4377199853,
-              "Unit": "l"
-            },
-            {
-              "Name": "Hematocrit",
-              "Value": 0.47
+              "Unit": "kg",
+              "ValueOrigin": {
+                "Source": "Unknown"
+              }
             },
             {
               "Name": "Blood flow rate (kidney)",
               "Value": 1.31,
-              "Unit": "l/min"
+              "Unit": "l/min",
+              "ValueOrigin": {
+                "Source": "Unknown"
+              }
             },
             {
               "Name": "Fraction unbound (experiment)",
@@ -1096,28 +1141,22 @@
               "Name": "Plasma clearance",
               "Value": 1.75,
               "Unit": "ml/min/kg"
-            },
-            {
-              "Name": "Specific clearance",
-              "Value": 0.8717442114,
-              "Unit": "1/min"
             }
           ]
         },
         {
-          "InternalName": "MetabolizationLiverMicrosomes_MM",
-          "DataSource": "fit",
-          "Molecule": "CYP3A4",
+          "InternalName": "CompetitiveInhibition",
+          "DataSource": "Eberl (2007)",
+          "Molecule": "P-gp",
           "Parameters": [
             {
-              "Name": "Km",
-              "Value": 48.7,
-              "Unit": "µmol/l"
-            },
-            {
-              "Name": "kcat",
-              "Value": 76.5,
-              "Unit": "1/min"
+              "Name": "Ki",
+              "Value": 4.1,
+              "Unit": "µmol/l",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Eberl 2007"
+              }
             }
           ]
         },
@@ -1135,11 +1174,38 @@
               "Name": "K_kinact_half",
               "Value": 6.04,
               "Unit": "µmol/l"
-            },
+            }
+          ]
+        },
+        {
+          "InternalName": "CompetitiveInhibition",
+          "DataSource": "Vermeer 2016",
+          "Molecule": "OATP1B1",
+          "Parameters": [
             {
               "Name": "Ki",
-              "Value": 6.04,
-              "Unit": "µmol/l"
+              "Value": 5.3,
+              "Unit": "µmol/l",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Vermeer 2016"
+              }
+            }
+          ]
+        },
+        {
+          "InternalName": "CompetitiveInhibition",
+          "DataSource": "Vermeer 2016",
+          "Molecule": "OATP1B3",
+          "Parameters": [
+            {
+              "Name": "Ki",
+              "Value": 14.0,
+              "Unit": "µmol/l",
+              "ValueOrigin": {
+                "Source": "Publication",
+                "Description": "Vermeer 2016"
+              }
             }
           ]
         }
