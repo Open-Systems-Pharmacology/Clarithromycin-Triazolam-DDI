@@ -1023,7 +1023,7 @@
           "Parameters": [
             {
               "Name": "Fraction unbound (plasma, reference value)",
-              "Value": 0.299,
+              "Value": 0.30,
               "ValueOrigin": {
                 "Source": "Publication",
                 "Description": "Chu 1993"
