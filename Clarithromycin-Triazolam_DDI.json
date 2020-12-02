@@ -1,5 +1,5 @@
 {
-  "Version": 76,
+  "Version": 77,
   "Individuals": [
     {
       "Name": "European (P-gp modified, CYP3A4 36 h)",
@@ -72,12 +72,22 @@
           },
           "Parameters": [
             {
+              "Name": "Reference concentration",
+              "Value": 4.32,
+              "Unit": "µmol/l"
+            },
+            {
               "Name": "t1/2 (liver)",
               "Value": 36.0,
               "Unit": "h",
               "ValueOrigin": {
                 "Source": "Unknown"
               }
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -187,6 +197,23 @@
             {
               "Name": "ColonSigmoid",
               "Value": 0.00010384615385
+            }
+          ],
+          "Parameters": [
+            {
+              "Name": "Reference concentration",
+              "Value": 1.0,
+              "Unit": "µmol/l"
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -576,6 +603,16 @@
               "ValueOrigin": {
                 "Source": "Unknown"
               }
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -618,6 +655,23 @@
               "Name": "Muscle",
               "MembraneLocation": "Basolateral",
               "Value": 0.00064682539683
+            }
+          ],
+          "Parameters": [
+            {
+              "Name": "Reference concentration",
+              "Value": 1.0,
+              "Unit": "µmol/l"
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -733,6 +787,16 @@
               "ValueOrigin": {
                 "Source": "Unknown"
               }
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -763,6 +827,16 @@
               "ValueOrigin": {
                 "Source": "Unknown"
               }
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -786,6 +860,16 @@
               "ValueOrigin": {
                 "Source": "Unknown"
               }
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 36.0,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
             }
           ]
         },
@@ -811,7 +895,24 @@
           ],
           "Ontogeny": {
             "Name": "CYP2C8"
-          }
+          },
+          "Parameters": [
+            {
+              "Name": "Reference concentration",
+              "Value": 2.56,
+              "Unit": "µmol/l"
+            },
+            {
+              "Name": "t1/2 (liver)",
+              "Value": 23.000001425,
+              "Unit": "h"
+            },
+            {
+              "Name": "t1/2 (intestine)",
+              "Value": 23.0,
+              "Unit": "h"
+            }
+          ]
         }
       ]
     }
@@ -1023,7 +1124,7 @@
           "Parameters": [
             {
               "Name": "Fraction unbound (plasma, reference value)",
-              "Value": 0.30,
+              "Value": 0.3,
               "ValueOrigin": {
                 "Source": "Publication",
                 "Description": "Chu 1993"
@@ -1231,6 +1332,11 @@
         {
           "Name": "Dissolution time (50% dissolved)",
           "Value": 5.0,
+          "Unit": "min"
+        },
+        {
+          "Name": "Lag time",
+          "Value": 0.0,
           "Unit": "min"
         },
         {
@@ -1509,31 +1615,12 @@
             },
             {
               "Name": "End time",
-              "Value": 2.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "Resolution",
-              "Value": 20.0,
-              "Unit": "pts/h"
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 2.0,
-              "Unit": "h"
-            },
-            {
-              "Name": "End time",
               "Value": 24.0,
               "Unit": "h"
             },
             {
               "Name": "Resolution",
-              "Value": 4.0,
+              "Value": 20.0,
               "Unit": "pts/h"
             }
           ]
@@ -1863,7 +1950,7 @@
             },
             {
               "Name": "End time",
-              "Value": 27.0,
+              "Value": 49.0,
               "Unit": "h",
               "ValueOrigin": {
                 "Source": "Unknown"
@@ -1876,31 +1963,6 @@
               "ValueOrigin": {
                 "Source": "Unknown"
               }
-            }
-          ]
-        },
-        {
-          "Parameters": [
-            {
-              "Name": "Start time",
-              "Value": 27.0,
-              "Unit": "h",
-              "ValueOrigin": {
-                "Source": "Unknown"
-              }
-            },
-            {
-              "Name": "End time",
-              "Value": 50.0,
-              "Unit": "h",
-              "ValueOrigin": {
-                "Source": "Unknown"
-              }
-            },
-            {
-              "Name": "Resolution",
-              "Value": 4.0,
-              "Unit": "pts/h"
             }
           ]
         }
@@ -2164,7 +2226,8 @@
               "MoleculeName": "CYP3A4"
             },
             {
-              "Name": "Renal Clearances-fitted"
+              "Name": "Renal Clearances-fitted",
+              "SystemicProcessType": "Renal"
             }
           ],
           "Protocol": {
@@ -2335,20 +2398,20 @@
             "MolWeight": 343.21
           },
           "Values": [
-            1.248012,
-            2.017396,
-            2.142644,
-            2.026342,
-            1.97713685,
-            1.842942,
-            1.64165,
-            1.529821,
-            1.440358,
-            1.225646,
-            0.2678373
+            0.001248012,
+            0.002017396,
+            0.00214264379,
+            0.002026342,
+            0.00197713682,
+            0.001842942,
+            0.00164164987,
+            0.00152982108,
+            0.001440358,
+            0.001225646,
+            0.000267837284
           ],
           "Dimension": "Concentration (mass)",
-          "Unit": "µg/l"
+          "Unit": "mg/l"
         }
       ],
       "BaseGrid": {
@@ -2470,19 +2533,19 @@
             "MolWeight": 343.21
           },
           "Values": [
-            0.5463836,
-            1.143868,
-            1.077044,
-            0.9669812,
-            0.8372642,
-            0.7507862,
-            0.5738994,
-            0.4048742,
-            0.3144654,
-            0.1965409
+            0.0005463836,
+            0.001143868,
+            0.001077044,
+            0.00096698117,
+            0.0008372642,
+            0.0007507862,
+            0.000573899364,
+            0.0004048742,
+            0.0003144654,
+            0.0001965409
           ],
           "Dimension": "Concentration (mass)",
-          "Unit": "µg/l"
+          "Unit": "mg/l"
         }
       ],
       "BaseGrid": {
